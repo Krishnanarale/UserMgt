@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>List of Users</h3>
+            <hr>
+            <ul class="list-group">
+                <a class="list-group-item" *ngFor="let user of users" (click)="userId = user.id" [routerLink]="user.id"
+                    routerLinkActive="active">{{ user.first_name + " " + user.last_name }}
+                    <span class="badge">{{user.id}}</span>
+                </a>
+            </ul>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-6">
+            <app-user-details [userId]="userId"></app-user-details>
+        </div>
+    </div>
+</div>
