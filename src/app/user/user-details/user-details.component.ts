@@ -16,7 +16,7 @@ export class UserDetailsComponent implements OnInit, OnChanges, OnDestroy {
   private subscription: Subscription;
   @Input() userId: number;
 
-  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     if(this.userId)
